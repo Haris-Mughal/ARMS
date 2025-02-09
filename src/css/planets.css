@@ -360,6 +360,18 @@
     height: 110px;
 }
 
+.head {
+    font-size: 20px;
+}
+
+.link {
+    text-decoration: underline;
+}
+.link:hover {
+    text-decoration: underline;
+    color: rgb(0, 72, 255);
+}
+
 #sound-sec {
     width: 100%;
     padding: 8px;
