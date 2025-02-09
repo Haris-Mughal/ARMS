@@ -55,21 +55,19 @@ function PlanetLast() {
                 </div>
             </div> */}
 
-            <div className="flex flex-col w-[90%] p-4 gap-4">
-                <div className="flex flex-row justify-between">
-                    <div className="flex flex-col justify-center items-center  border border-white glass w-[45%] h-[70px] gap-2">
-                        <div className="">Oxygen Level</div>
+            <div className="status-container">
+                <div className="row">
+                    <div className="card glass">
+                        <div>Oxygen Level</div>
                         <div>92%</div>
                     </div>
-                    <div className="flex flex-col justify-center items-center  border border-white glass w-[45%] h-[70px] gap-2 ">
+                    <div className="card glass">
                         <div>Water Level</div>
                         <div>86%</div>
                     </div>
                 </div>
-                <div className="border flex justify-center items-center  border-white glass h-[70px] ">
-                    Food Level 78%
-                </div>
-                <div className="flex flex-col justify-center items-center  border border-white glass h-[80px] gap-2 ">
+                <div className="card center glass">Food Level 78%</div>
+                <div className="card center glass">
                     <div>Remaining Time for Mission</div>
                     <div>230 d : 14 h : 30 m : 7 s</div>
                 </div>
