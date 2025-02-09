@@ -1,15 +1,44 @@
 .glass {
     background: radial-gradient(
         circle,
-        rgba(29, 200, 216, 0.515),
-        rgba(69, 76, 79, 0.25) 80%,
-        rgba(38, 49, 83, 0.6) 100%
+        rgba(65, 189, 195, 0.515),
+        rgba(138, 133, 123, 0.25) 80%,
+        rgba(60, 56, 56, 0.827) 100%
     );
-    border-radius: 15px;
     box-shadow: 0 8px 32px 0 rgba(51, 51, 53, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    border-radius: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.422);
 }
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 16px;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 70px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.center {
+  width: 100%;
+  height: 70px;
+}
+
 
 #cards {
     display: flex;
