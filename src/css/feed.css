@@ -17,6 +17,10 @@
 
 }
 
+.prodTitle {
+    font-size: 26px;
+}
+
 #card1F {
     background: radial-gradient(
         circle,
@@ -232,7 +236,7 @@
 }
 
 .profile-name {
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .username {
