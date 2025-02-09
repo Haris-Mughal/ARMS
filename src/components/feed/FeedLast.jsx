@@ -13,7 +13,6 @@ function FeedLast() {
                         environments.
                     </div>
                     <br />
-                    {/* <img className="social" src="/Socials.png" alt="" /> */}
                 </div>
                 <hr />
                 <br />
