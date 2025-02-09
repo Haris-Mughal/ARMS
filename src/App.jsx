@@ -1,35 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import PlanetsFirst from "./components/planets/PlanetFirst";
+import PlanetsMid from "./components/planets/PlanetMid";
+import PlanetsLast from "./components/planets/PlanetLast";
+import FeedFirst from "./components/feed/FeedFirst";
+import FeedMid from "./components/feed/FeedMid";
+import FeedLast from "./components/feed/FeedLast";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [activeComponent, setActiveComponent] = useState("Planets");
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const blocks = () => {
+        if (activeComponent === "Planets") {
+            return (
+                <>
+                    <div className="block-first">
+                        <PlanetsFirst />
+                    </div>
+                    <div className="block-mid">
+                        <PlanetsMid />
+                    </div>
+                    <div className="block-last">
+                        <PlanetsLast />
+                    </div>
+                </>
+            );
+        } else if (activeComponent === "Feed") {
+            return (
+                <>
+                    <div className="feed-block-first">
+                        <FeedFirst />
+                    </div>
+                    <div className="feed-block-mid">
+                        <FeedMid />
+                    </div>
+                    <div className="feed-block-last">
+                        <FeedLast />
+                    </div>
+                </>
+            );
+        }
+    };
+
+    return (
+        <div id="container">
+            <div id="top">
+                <img
+                    id="solar"
+                    src="/Solar System.png"
+                    alt="Solar System"
+                />
+            </div>
+            <div id="cards">
+                <div id="menu">
+                    <img
+                        id="icons"
+                        src="/Notification Icon.png"
+                        alt="Notification"
+                    />
+                    <img
+                        id="icons"
+                        src="/Planet Icon.png"
+                        alt="Planets"
+                        onClick={() => setActiveComponent("Planets")}
+                    />
+                    <img id="icons" src="/Star Icon.png" alt="Star" />
+                    <img
+                        id="icons"
+                        src="/Friends Icon.png"
+                        alt="Feed"
+                        onClick={() => setActiveComponent("Feed")}
+                    />
+                    <img id="icons" src="/AI Icon.png" alt="AI" />
+                    <img
+                        id="icons"
+                        src="/Headset Icon.png"
+                        alt="Headset"
+                    />
+                    <img
+                        id="icons"
+                        src="/Settings Icon.png"
+                        alt="Settings"
+                    />
+                </div>
+                {blocks()}
+            </div>
+        </div>
+    );
 }
 
-export default App
+export default App;
