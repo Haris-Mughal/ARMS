@@ -1,7 +1,7 @@
 function FeedFirst() {
     return (
         <>
-            <div className="text-3xl">Product Functionality</div>
+            <div className="text-3xl prodTitle">Product Functionality</div>
             <div className="chats">
                 <div id="card1F">
                     <div id="content-oneF">
